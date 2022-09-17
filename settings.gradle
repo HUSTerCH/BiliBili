@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "BiliBili"
 include ':app'
+include ':frontPage'
+include ':me'
+include ':frontPage-export'
+include ':me-export'

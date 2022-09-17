@@ -4,17 +4,20 @@
     package="com.fengsheng.bilibili">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BiliBili"
-        tools:targetApi="31">
+        android:theme="@style/Theme.App"
+        tools:targetApi="31"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="fengsheng">
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

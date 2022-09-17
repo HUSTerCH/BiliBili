@@ -1,6 +1,6 @@
 ## 仿制bilibili客户端
 
-计划技术方向：kotlin+mvvm+retrofit
+计划技术方向：kotlin+mvvm+retrofit+mmkv+arouter
 
 ### v0.1.0
 
@@ -15,5 +15,3 @@
 5. 实现**我的**界面部分，绘制完成其ui，暂时不完成其功能
 
 ### v0.2.0
-
-  
