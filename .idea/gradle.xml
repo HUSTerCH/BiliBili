@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/frontPage-export" />
             <option value="$PROJECT_DIR$/me" />
             <option value="$PROJECT_DIR$/me-export" />
+            <option value="$PROJECT_DIR$/videoPlay" />
           </set>
         </option>
       </GradleProjectSettings>
