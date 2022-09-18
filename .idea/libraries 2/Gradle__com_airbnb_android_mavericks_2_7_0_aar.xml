@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.airbnb.android:mavericks:2.7.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/51d45300d27a27339d7e3c407ca680a2/transformed/mavericks-2.7.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/51d45300d27a27339d7e3c407ca680a2/transformed/mavericks-2.7.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/51d45300d27a27339d7e3c407ca680a2/transformed/mavericks-2.7.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.airbnb.android/mavericks/2.7.0/1f05d0c3f50035c307d172853db23e6e02e21b3/mavericks-2.7.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.airbnb.android/mavericks/2.7.0/977a60c25124cdbf71bc2002ae7f56875f046f34/mavericks-2.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

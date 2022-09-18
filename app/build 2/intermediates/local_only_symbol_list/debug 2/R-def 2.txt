@@ -1,0 +1,31 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color color_593D3D
+color color_E0E2E5
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id fragment_container_view
+id iv_tab_icon
+id tl_tab
+id tv_tab_name
+id vp_content
+layout activity_main
+layout fragment_main
+layout fragment_me
+layout layout_main_tab_normal
+mipmap ic_launcher
+string app_name
+string app_tab_frontPage
+string app_tab_me
+style ActivityTheme
+style Theme.App
+style Theme.BiliBili
+xml backup_rules
+xml data_extraction_rules
