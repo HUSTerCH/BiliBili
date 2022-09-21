@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="circle_article_aspectRatio" type="fraction">266.6667%</item>
+    <item name="popular_video_aspectRatio" type="fraction">300%</item>
+    <item name="recommend_video_aspectRatio" type="fraction">106%</item>
+    <item name="ratio_4_3" type="fraction">133.3333%</item>
 </resources>

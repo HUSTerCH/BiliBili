@@ -8,8 +8,9 @@ import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 object VideoNetWork {
-    private val popularVideoService = NetWorkManager.create<GetVideo>()
-    suspend fun getPopularList() = popularVideoService.getPopular()
+    private val videoService = NetWorkManager.create<GetVideo>()
+    suspend fun getPopularList() = videoService.getPopular()
+    suspend fun getRecommendList(aid: Long) = videoService.getRecommend(aid)
 
     private suspend fun <T> Call<T>.await(): T {
         return suspendCoroutine { continuation ->

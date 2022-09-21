@@ -1,6 +1,6 @@
 package com.fengsheng.base.network
 
-data class VideoDataBean(val code: Int, val message: String, val ttl: Int, val data: Data) {
+data class PopularVideoDataBean(val code: Int, val data: Data, val message: String) {
     data class Data(val list: Array<VideoInfo>, val no_more: Boolean) {
         data class VideoInfo(
             val aid: Long,

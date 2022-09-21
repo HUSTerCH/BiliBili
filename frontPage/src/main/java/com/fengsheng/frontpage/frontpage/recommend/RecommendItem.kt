@@ -1,12 +1,10 @@
-package com.fengsheng.frontpage.frontpage.popular
+package com.fengsheng.frontpage.frontpage.recommend
 
-import android.net.Uri
-
-data class PopularItem(
+data class RecommendItem(
     val videoCoverUrl: String,
     val videoName: String,
     val uploaderName: String,
     val duration: Int,
     val watchTimes: Long,
     val backTime: Long
-)
+) {}

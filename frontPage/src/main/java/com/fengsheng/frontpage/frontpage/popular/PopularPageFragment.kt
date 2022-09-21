@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.fengsheng.base.network.VideoDataBean
+import com.fengsheng.base.network.PopularVideoDataBean
 import com.fengsheng.frontpage.R
 import kotlinx.android.synthetic.main.fragment_popular_page.*
 
@@ -37,7 +37,7 @@ class PopularPageFragment : Fragment() {
         }
     }
 
-    private fun getVideos(it: VideoDataBean): ArrayList<PopularItem> {
+    private fun getVideos(it: PopularVideoDataBean): ArrayList<PopularItem> {
         val videos = ArrayList<PopularItem>()
         val videoList = it.data.list
         for (i in videoList.indices) {

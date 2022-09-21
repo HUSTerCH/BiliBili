@@ -5,18 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.fengsheng.frontpage.frontpage.RecommendPageFragment
 import com.fengsheng.frontpage.frontpage.popular.PopularPageFragment
+import com.fengsheng.frontpage.frontpage.recommend.RecommendPageFragment
 import com.fengsheng.frontpage_export.FrontPageRouter
 import kotlinx.android.synthetic.main.fragment_front_page.*
+import kotlinx.coroutines.runBlocking
 
 @Route(path = FrontPageRouter.FRONT_PAGE_ROUTER)
 class FrontPageFragment : Fragment() {
     lateinit var fragmentList: ArrayList<Fragment>
     lateinit var titleList: ArrayList<String>
     lateinit var myFragmentStVpTitleAdapter: MyFragmentStVpTitleAdapter
-
+    lateinit var swipeRefresh: SwipeRefreshLayout
+    var isRefreshing = false
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,11 +30,14 @@ class FrontPageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        swipeRefresh = view.findViewById(R.id.front_page_swipe_fresh)
+        swipeRefresh.setColorSchemeColors(resources.getColor(R.color.bilibili_pink))
         initData()
         myFragmentStVpTitleAdapter =
             MyFragmentStVpTitleAdapter(childFragmentManager, fragmentList, titleList)
         front_page_viewPager.adapter = myFragmentStVpTitleAdapter
         front_page_tabLayout.setupWithViewPager(front_page_viewPager)
+
     }
 
     private fun initData() {
@@ -44,6 +50,15 @@ class FrontPageFragment : Fragment() {
         titleList = ArrayList()
         titleList.add("推荐")
         titleList.add("热门")
+
+        swipeRefresh.setOnRefreshListener {
+            swipeRefresh.isRefreshing = isRefreshing
+            runBlocking {
+                isRefreshing = recommendPageFragment.refresh()
+            }
+            swipeRefresh.isRefreshing = isRefreshing
+
+        }
     }
 
 }

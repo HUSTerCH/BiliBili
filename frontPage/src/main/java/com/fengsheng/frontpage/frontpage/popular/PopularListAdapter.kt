@@ -2,6 +2,7 @@ package com.fengsheng.frontpage.frontpage.popular
 
 import android.content.Context
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fengsheng.base.R
 import java.text.SimpleDateFormat
+import kotlin.math.floor
 
 class PopularListAdapter(private val context: Context, private val videoList: List<PopularItem>) :
     RecyclerView.Adapter<PopularListAdapter.PopularListAdapterViewHolder>() {
@@ -21,7 +23,7 @@ class PopularListAdapter(private val context: Context, private val videoList: Li
         viewType: Int
     ): PopularListAdapterViewHolder {
         val itemView = LayoutInflater.from(context)
-            .inflate(com.fengsheng.base.R.layout.item_video_card_popular, parent, false)
+            .inflate(R.layout.item_video_card_popular, parent, false)
         return PopularListAdapterViewHolder(itemView)
     }
 
@@ -31,14 +33,14 @@ class PopularListAdapter(private val context: Context, private val videoList: Li
 
     override fun onBindViewHolder(holder: PopularListAdapterViewHolder, position: Int) {
         Glide.with(holder.itemView).load(Uri.parse(videoList[position].videoCoverUrl))
-            .into(holder.itemView.findViewById(R.id.video_cover))
-//        holder.itemView.findViewById<ImageView>(R.id.video_cover).setImageURI(Uri.parse(videoList[position].videoCoverUrl))
-        holder.itemView.findViewById<TextView>(R.id.video_name).text = videoList[position].videoName
-        holder.itemView.findViewById<TextView>(R.id.video_uploader_name).text =
+            .into(holder.itemView.findViewById(R.id.popular_video_cover))
+        holder.itemView.findViewById<TextView>(R.id.popular_video_name).text = videoList[position].videoName
+        holder.itemView.findViewById<TextView>(R.id.popular_video_uploader_name).text =
             videoList[position].uploaderName
-//        剩下的观看次数和发布时间暂时先放下下
-        holder.itemView.findViewById<TextView>(R.id.video_duration).text =
+        holder.itemView.findViewById<TextView>(R.id.popular_video_duration).text =
             setDurationFormat(videoList[position].duration)
+        holder.itemView.findViewById<TextView>(R.id.popular_video_watch_times_pubTime).text =
+            setWatchTimeAndPubTime(videoList[position].watchTimes, videoList[position].backTime)
     }
 
     private fun setDurationFormat(duration: Int): String {
@@ -71,10 +73,34 @@ class PopularListAdapter(private val context: Context, private val videoList: Li
         return durationFormat
     }
 
-    private fun setWatchTimeAndPubTime(): String {
+    private fun setWatchTimeAndPubTime(watchTimesData: Long, pubTimeData: Long): String {
+//        观看次数：次数大于1万，显示万，次数大于1亿，显示亿，次数不足一万，显示详细播放量
+//        发布时间：距离现在不足24h，显示xx小时前，距离现在超过24h，不足48h，显示"昨天"，距离现在超过48h，显示日期"xx-xx"
         val watchTimeAndPubTime: String
-        val watchTime: Double
-        val pubTime: Int
+        val pubTime: String
+
+        val watchTime: String = if (watchTimesData > 100000000) {
+            String.format("%.1f亿观看", (watchTimesData / 100000000.0))
+        } else if (watchTimesData > 10000) {
+            String.format("%.1f万次播放", (watchTimesData / 10000.0))
+        } else String.format("%.1f次播放", watchTimesData.toDouble())
+
+        val timeStamp = System.currentTimeMillis() / 1000
+        Log.e("时间戳", timeStamp.toString())
+        Log.e("发布时间", pubTimeData.toString())
+        val backHours = floor(((timeStamp - pubTimeData) / 3600).toDouble()).toInt()
+        pubTime = when (backHours) {
+            in 0..23 -> {
+                "${backHours}小时前"
+            }
+            in 24..48 -> {
+                "昨天"
+            }
+            else -> SimpleDateFormat("MM-dd").format(pubTimeData)
+        }
+
+
+        watchTimeAndPubTime = "$watchTime · $pubTime"
 
         return watchTimeAndPubTime
     }

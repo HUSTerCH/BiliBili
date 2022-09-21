@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object NetWorkManager {
-    val retrofit = Retrofit.Builder()
+    private val retrofit = Retrofit.Builder()
         .baseUrl("https://api.bilibili.com/x/web-interface/")
         .addConverterFactory(GsonConverterFactory.create()).build()
 
