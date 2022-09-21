@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App"
         tools:targetApi="31"
+        android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory"
         android:appComponentFactory="fengsheng">
 
