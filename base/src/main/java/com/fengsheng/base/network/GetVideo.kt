@@ -7,6 +7,6 @@ interface GetVideo {
     @GET("popular")
     suspend fun getPopular(): PopularVideoDataBean
 
-    @GET("archive/related")
-    suspend fun getRecommend(@Query("aid") aid:Long): RecommendVideoDataBean
+    @GET("dynamic/region?&ps=16&rid=1")
+    suspend fun getRecommend(): RecommendVideoDataBean
 }

@@ -5,13 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.fengsheng.frontpage.frontpage.popular.PopularPageFragment
 import com.fengsheng.frontpage.frontpage.recommend.RecommendPageFragment
 import com.fengsheng.frontpage_export.FrontPageRouter
 import kotlinx.android.synthetic.main.fragment_front_page.*
+import kotlinx.android.synthetic.main.fragment_recommend_page.*
 import kotlinx.coroutines.runBlocking
+
 
 @Route(path = FrontPageRouter.FRONT_PAGE_ROUTER)
 class FrontPageFragment : Fragment() {
@@ -50,6 +55,14 @@ class FrontPageFragment : Fragment() {
         titleList = ArrayList()
         titleList.add("推荐")
         titleList.add("热门")
+
+        swipeRefresh.setOnChildScrollUpCallback(SwipeRefreshLayout.OnChildScrollUpCallback { _, _ ->
+            val recommendVideoList: RecyclerView = recommendPageFragment.recommend_video_list
+                ?: return@OnChildScrollUpCallback false
+            val layoutManager =
+                recommendVideoList.layoutManager as LinearLayoutManager
+            layoutManager.findFirstCompletelyVisibleItemPosition() != 0
+        })
 
         swipeRefresh.setOnRefreshListener {
             swipeRefresh.isRefreshing = isRefreshing

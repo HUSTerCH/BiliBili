@@ -15,9 +15,9 @@ class RecommendViewModel : ViewModel() {
 
     private val _errorMsg = MutableLiveData<String?>()
     val errorMsg: LiveData<String?> = _errorMsg
-    fun getRecommendVideosData(aid:Long) {
+    fun getRecommendVideosData() {
         viewModelScope.launch {
-            val result = VideoNetWork.getRecommendList(aid)
+            val result = VideoNetWork.getRecommendList()
             _videosData.value = result
         }
     }

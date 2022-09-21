@@ -10,7 +10,7 @@ import kotlin.coroutines.suspendCoroutine
 object VideoNetWork {
     private val videoService = NetWorkManager.create<GetVideo>()
     suspend fun getPopularList() = videoService.getPopular()
-    suspend fun getRecommendList(aid: Long) = videoService.getRecommend(aid)
+    suspend fun getRecommendList() = videoService.getRecommend()
 
     private suspend fun <T> Call<T>.await(): T {
         return suspendCoroutine { continuation ->

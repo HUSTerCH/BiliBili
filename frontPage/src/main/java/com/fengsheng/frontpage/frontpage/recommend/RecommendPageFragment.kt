@@ -29,7 +29,7 @@ class RecommendPageFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         viewModel = ViewModelProvider(this)[RecommendViewModel::class.java]
-        viewModel.getRecommendVideosData(12345678)
+        viewModel.getRecommendVideosData()
         viewModel.videosData.observe(this) {
             videoList = getVideos(it)
             myAdapter = context?.let { it1 -> RecommendListAdapter(it1, videoList!!) }
@@ -41,7 +41,7 @@ class RecommendPageFragment : Fragment() {
 
     private fun getVideos(it: RecommendVideoDataBean): ArrayList<RecommendItem> {
         val videos = ArrayList<RecommendItem>()
-        val videoList = it.data
+        val videoList = it.data.archives
         for (i in videoList.indices) {
             val video = RecommendItem(
                 videoList[i].pic,
@@ -53,12 +53,11 @@ class RecommendPageFragment : Fragment() {
             )
             videos.add(video)
         }
-        randomVideoAid = videoList[(Math.random() * videoList.size).toInt()].aid
         return videos
     }
 
     fun refresh():Boolean {
-        viewModel.getRecommendVideosData(randomVideoAid)
+        viewModel.getRecommendVideosData()
         return false
     }
 }
