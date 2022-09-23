@@ -1,4 +1,4 @@
-package com.fengsheng.bilibili.main
+package com.fengsheng.base.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

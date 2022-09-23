@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.fengsheng.base.adapter.MyFragmentStVpTitleAdapter
 import com.fengsheng.frontpage.frontpage.popular.PopularPageFragment
 import com.fengsheng.frontpage.frontpage.recommend.RecommendPageFragment
 import com.fengsheng.frontpage_export.FrontPageRouter

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.fengsheng.base.adapter.MyFragmentVPAdapter
 import com.fengsheng.bilibili.R
 import com.fengsheng.bilibili.databinding.ActivityMainBinding
 import com.fengsheng.frontpage.FrontPageFragment

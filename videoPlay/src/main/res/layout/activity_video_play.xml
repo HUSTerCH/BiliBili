@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <VideoView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"/>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
-        <com.google.android.material.tabs.TabLayout
+        android:orientation="vertical">
+
+        <VideoView
+            android:id="@+id/video_play"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-        <androidx.viewpager.widget.ViewPager
+            android:layout_height="match_parent"
+            android:layout_weight="2.75" />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/top_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@null"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/bilibili_pink"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="auto"
+                app:tabSelectedTextColor="@color/bilibili_pink"
+                app:tabTextColor="@color/grey" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/video_play_desc_com"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
     </LinearLayout>
-
-
-</LinearLayout>
+</layout>

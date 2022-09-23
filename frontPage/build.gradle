@@ -17,8 +17,8 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
-        kapt{
-            arguments{
+        kapt {
+            arguments {
                 arg("AROUTER_MODULE_NAME", project.getName())
             }
         }
@@ -47,8 +47,9 @@ android {
 }
 
 dependencies {
-    implementation project(path:':frontPage-export')
+    implementation project(path: ':frontPage-export')
     implementation project(path: ':base')
+    implementation project(path: ":videoPlay")
 //    implementation fileTree(includes: ['*.jar'],dir: 'libs')
     kapt 'com.alibaba:arouter-compiler:1.5.2'
 
@@ -74,7 +75,7 @@ dependencies {
     implementation 'com.alibaba:arouter-api:1.5.2'
     annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
     implementation 'com.android.support:percent:26.+'

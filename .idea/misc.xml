@@ -31,7 +31,9 @@
         <entry key="frontPage/src/main/res/layout/fragment_popular_page.xml" value="0.11614583333333334" />
         <entry key="frontPage/src/main/res/layout/fragment_recommend_page.xml" value="0.1" />
         <entry key="me/src/main/res/layout/fragment_me.xml" value="0.1171875" />
-        <entry key="videoPlay/src/main/res/layout/activity_video_play.xml" value="0.11614583333333334" />
+        <entry key="videoPlay/src/main/res/layout/activity_video_play.xml" value="0.1" />
+        <entry key="videoPlay/src/main/res/layout/fragment_comment.xml" value="0.11303802758044296" />
+        <entry key="videoPlay/src/main/res/layout/fragment_introduction.xml" value="0.11303802758044296" />
       </map>
     </option>
   </component>
