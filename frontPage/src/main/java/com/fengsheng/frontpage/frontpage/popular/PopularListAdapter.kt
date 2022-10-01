@@ -86,8 +86,6 @@ class PopularListAdapter(private val context: Context, private val videoList: Li
         } else String.format("%.1f次播放", watchTimesData.toDouble())
 
         val timeStamp = System.currentTimeMillis() / 1000
-        Log.e("时间戳", timeStamp.toString())
-        Log.e("发布时间", pubTimeData.toString())
         val backHours = floor(((timeStamp - pubTimeData) / 3600).toDouble()).toInt()
         pubTime = when (backHours) {
             in 0..23 -> {

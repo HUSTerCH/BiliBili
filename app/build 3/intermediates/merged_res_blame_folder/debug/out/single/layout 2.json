@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.fengsheng.bilibili.app-mergeDebugResources-38:/layout/layout_main_tab_normal.xml",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/layout_main_tab_normal.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-mergeDebugResources-38:/layout/activity_splash.xml",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-mergeDebugResources-38:/layout/activity_main.xml",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-mergeDebugResources-38:/layout/fragment_me.xml",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/fragment_me.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-mergeDebugResources-38:/layout/fragment_main.xml",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/fragment_main.xml"
+    }
+]

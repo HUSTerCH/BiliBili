@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/xml_backup_rules.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/layout_fragment_main.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/drawable_ic_bilibili_logo.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/drawable/ic_bilibili_logo.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/mipmap-ldpi_ic_launcher.png.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/mipmap-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/layout_activity_splash.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/drawable_ic_front_page.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/drawable/ic_front_page.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/drawable_ic_bilibili_line_grey.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/drawable/ic_bilibili_line_grey.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/mipmap_ic_startup.png.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/mipmap/ic_startup.png"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/layout_fragment_me.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/fragment_me.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/layout_layout_main_tab_normal.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/layout_main_tab_normal.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/drawable_ic_front_page_grey.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/drawable/ic_front_page_grey.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/layout_activity_main.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/xml_data_extraction_rules.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.fengsheng.bilibili.app-merged_res-39:/drawable_ic_bilibili_line.xml.flat",
+        "source": "com.fengsheng.bilibili.app-main-41:/drawable/ic_bilibili_line.xml"
+    }
+]

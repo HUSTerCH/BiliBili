@@ -9,4 +9,5 @@ interface GetVideo {
 
     @GET("dynamic/region?&ps=16&rid=1")
     suspend fun getRecommend(): RecommendVideoDataBean
+
 }

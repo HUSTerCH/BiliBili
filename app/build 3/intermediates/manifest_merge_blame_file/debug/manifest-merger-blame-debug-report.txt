@@ -1,0 +1,115 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.fengsheng.bilibili"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+8-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:48:5-66
+11-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:48:22-64
+12
+13    <application
+13-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:6:5-46:19
+14        android:name="com.fengsheng.bilibili.App"
+14-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:7:9-28
+15        android:allowBackup="true"
+15-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:8:9-35
+16        android:appComponentFactory="fengsheng"
+16-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:18:9-48
+17        android:dataExtractionRules="@xml/data_extraction_rules"
+17-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:9:9-65
+18        android:debuggable="true"
+19        android:extractNativeLibs="false"
+20        android:fullBackupContent="@xml/backup_rules"
+20-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:10:9-54
+21        android:icon="@mipmap/ic_launcher"
+21-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:11:9-43
+22        android:label="@string/app_name"
+22-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:12:9-41
+23        android:roundIcon="@mipmap/ic_launcher"
+23-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:13:9-48
+24        android:supportsRtl="true"
+24-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:14:9-35
+25        android:testOnly="true"
+26        android:theme="@style/Theme.App" >
+26-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:15:9-41
+27        <activity
+27-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:20:9-35:20
+28            android:name="com.fengsheng.bilibili.SplashActivity"
+28-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:21:13-43
+29            android:configChanges="keyboardHidden"
+29-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:22:13-51
+30            android:exported="true"
+30-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:27:13-36
+31            android:label="@string/app_name"
+31-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:23:13-45
+32            android:launchMode="singleTask"
+32-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:24:13-44
+33            android:screenOrientation="portrait"
+33-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:25:13-49
+34            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+34-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:26:13-71
+35            <intent-filter>
+35-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:28:13-34:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:29:17-69
+36-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:29:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:30:17-77
+38-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:30:27-74
+39                <category android:name="android.intent.category.HOME" />
+39-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:32:17-72
+39-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:32:27-70
+40                <category android:name="android.intent.category.DEFAULT" />
+40-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:33:17-76
+40-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:33:27-73
+41            </intent-filter>
+42        </activity>
+43        <activity
+43-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:36:9-45:20
+44            android:name="com.fengsheng.bilibili.main.MainActivity"
+44-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:37:13-46
+45            android:exported="true"
+45-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:38:13-36
+46            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge" >
+46-->/Users/luochang/Documents/GitHub/BiliBili/app/src/main/AndroidManifest.xml:39:13-85
+47
+48            <!-- <intent-filter> -->
+49            <!-- <action android:name="android.intent.action.MAIN" /> -->
+50
+51
+52            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+53            <!-- </intent-filter> -->
+54        </activity>
+55
+56        <provider
+56-->[androidx.emoji2:emoji2:1.2.0] /Users/luochang/.gradle/caches/transforms-3/03cb5a80a751c8c35ea91a44d9b5c38a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+57            android:name="androidx.startup.InitializationProvider"
+57-->[androidx.emoji2:emoji2:1.2.0] /Users/luochang/.gradle/caches/transforms-3/03cb5a80a751c8c35ea91a44d9b5c38a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+58            android:authorities="com.fengsheng.bilibili.androidx-startup"
+58-->[androidx.emoji2:emoji2:1.2.0] /Users/luochang/.gradle/caches/transforms-3/03cb5a80a751c8c35ea91a44d9b5c38a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+59            android:exported="false" >
+59-->[androidx.emoji2:emoji2:1.2.0] /Users/luochang/.gradle/caches/transforms-3/03cb5a80a751c8c35ea91a44d9b5c38a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+60            <meta-data
+60-->[androidx.emoji2:emoji2:1.2.0] /Users/luochang/.gradle/caches/transforms-3/03cb5a80a751c8c35ea91a44d9b5c38a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+61                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+61-->[androidx.emoji2:emoji2:1.2.0] /Users/luochang/.gradle/caches/transforms-3/03cb5a80a751c8c35ea91a44d9b5c38a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+62                android:value="androidx.startup" />
+62-->[androidx.emoji2:emoji2:1.2.0] /Users/luochang/.gradle/caches/transforms-3/03cb5a80a751c8c35ea91a44d9b5c38a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+63            <meta-data
+63-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/luochang/.gradle/caches/transforms-3/4927a9dc8967878abceb905676997541/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+64                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+64-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/luochang/.gradle/caches/transforms-3/4927a9dc8967878abceb905676997541/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+65                android:value="androidx.startup" />
+65-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/luochang/.gradle/caches/transforms-3/4927a9dc8967878abceb905676997541/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+66        </provider>
+67    </application>
+68
+69</manifest>
