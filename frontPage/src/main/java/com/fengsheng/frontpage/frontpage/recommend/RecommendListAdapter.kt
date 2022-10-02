@@ -41,6 +41,8 @@ class RecommendListAdapter(
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context,VideoPlayActivity::class.java)
+            intent.putExtra("aid",videoList[position].aid)
+            intent.putExtra("cid",videoList[position].cid)
             context.startActivity(intent)
         }
     }

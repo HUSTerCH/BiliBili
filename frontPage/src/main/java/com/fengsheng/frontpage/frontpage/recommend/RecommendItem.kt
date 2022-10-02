@@ -6,5 +6,7 @@ data class RecommendItem(
     val uploaderName: String,
     val duration: Int,
     val watchTimes: Long,
-    val backTime: Long
+    val backTime: Long,
+    val aid: Long,
+    val cid: Long
 ) {}

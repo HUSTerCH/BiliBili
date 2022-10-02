@@ -9,9 +9,9 @@ data class RecommendVideoDataBean(
     data class Data(val page: Page, val archives: List<Archive>) {
         data class Page(val num: Int, val page: Int, val count: Int)
         data class Archive(
-            val aid: Int,
+            val aid: Long,
             val bvid: String,
-            val cid: Int,
+            val cid: Long,
             val copyright: Int,
             val ctime: Int,
             val desc: String,
@@ -57,7 +57,7 @@ data class RecommendVideoDataBean(
 
             data class Owner(
                 val face: String,
-                val mid: Int,
+                val mid: Long,
                 val name: String
             )
 

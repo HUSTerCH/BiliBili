@@ -49,7 +49,9 @@ class RecommendPageFragment : Fragment() {
                 videoList[i].owner.name,
                 videoList[i].duration,
                 videoList[i].stat.view,
-                videoList[i].pubdate
+                videoList[i].pubdate,
+                videoList[i].aid,
+                videoList[i].cid
             )
             videos.add(video)
         }

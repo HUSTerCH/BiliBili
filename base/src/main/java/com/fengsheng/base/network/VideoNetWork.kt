@@ -11,6 +11,7 @@ object VideoNetWork {
     private val videoService = NetWorkManager.create<GetVideo>()
     suspend fun getPopularList() = videoService.getPopular()
     suspend fun getRecommendList() = videoService.getRecommend()
+    suspend fun getVideoPlayUrlData(avid: Long, cid: Long) = videoService.getVideoPlayUrl(avid, cid)
 
     private suspend fun <T> Call<T>.await(): T {
         return suspendCoroutine { continuation ->

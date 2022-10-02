@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NetWorkManager {
     private val retrofit = Retrofit.Builder()
-        .baseUrl("https://api.bilibili.com/x/web-interface/")
+        .baseUrl("https://api.bilibili.com/x/")
         .addConverterFactory(GsonConverterFactory.create()).build()
 
     fun <T> create(netManager: Class<T>): T = retrofit.create(netManager)

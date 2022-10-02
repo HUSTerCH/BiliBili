@@ -51,7 +51,7 @@ data class PopularVideoDataBean(val code: Int, val data: Data, val message: Stri
 
             data class Owner(
                 val face: String,
-                val mid: Int,
+                val mid: Long,
                 val name: String
             )
 
