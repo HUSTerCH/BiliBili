@@ -1,2 +1,0 @@
-com.fengsheng.videoplay
-layout activity_video_play

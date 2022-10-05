@@ -1,1 +1,0 @@
-int layout activity_video_play 0x0

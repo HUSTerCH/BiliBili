@@ -37,7 +37,6 @@
                 app:tabMode="auto"
                 app:tabSelectedTextColor="@color/bilibili_pink"
                 app:tabTextColor="@color/grey" />
-
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/video_play_desc_com"
                 android:layout_width="match_parent"
