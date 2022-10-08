@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="18dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Bv1wa411N7eH"
+            android:textSize="11dp"/>
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_forbidden"/>
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="11dp"
+            android:text="未经作者授权禁止转载"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:text="突然就卡出来了个闪瞎人的bug哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"/>
+
+</LinearLayout>

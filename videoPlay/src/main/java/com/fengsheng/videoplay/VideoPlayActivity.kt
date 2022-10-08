@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.fengsheng.base.adapter.MyFragmentStVpTitleAdapter
+import com.fengsheng.videoplay.comment.CommentFragment
 import com.fengsheng.videoplay.databinding.ActivityVideoPlayBinding
+import com.fengsheng.videoplay.introduction.IntroductionFragment
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
 import kotlinx.android.synthetic.main.activity_video_play.*

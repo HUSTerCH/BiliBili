@@ -1,2 +1,0 @@
-com.fengsheng.me
-layout fragment_me

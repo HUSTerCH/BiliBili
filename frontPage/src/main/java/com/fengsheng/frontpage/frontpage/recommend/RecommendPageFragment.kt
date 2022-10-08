@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.fengsheng.base.network.RecommendVideoDataBean
+import com.fengsheng.base.network.bean.RecommendVideoDataBean
 import com.fengsheng.frontpage.R
 import kotlinx.android.synthetic.main.fragment_recommend_page.*
 
@@ -16,7 +16,6 @@ class RecommendPageFragment : Fragment() {
     private var videoList: ArrayList<RecommendItem>? = null
     private lateinit var viewModel: RecommendViewModel
     private var myAdapter: RecommendListAdapter? = null
-    var randomVideoAid: Long = 12345678
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -51,7 +50,8 @@ class RecommendPageFragment : Fragment() {
                 videoList[i].stat.view,
                 videoList[i].pubdate,
                 videoList[i].aid,
-                videoList[i].cid
+                videoList[i].cid,
+                videoList[i].bvid
             )
             videos.add(video)
         }

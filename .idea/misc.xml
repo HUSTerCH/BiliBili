@@ -21,12 +21,20 @@
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.161" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.161" />
         <entry key="base/src/main/res/drawable/ic_____.xml" value="0.1785" />
+        <entry key="base/src/main/res/drawable/ic_barrage.xml" value="0.1255" />
         <entry key="base/src/main/res/drawable/ic_barrage_white.xml" value="0.224" />
+        <entry key="base/src/main/res/drawable/ic_coin.xml" value="0.203" />
+        <entry key="base/src/main/res/drawable/ic_dislike.xml" value="0.2505" />
+        <entry key="base/src/main/res/drawable/ic_like.xml" value="0.2505" />
+        <entry key="base/src/main/res/drawable/ic_people.xml" value="0.2325" />
         <entry key="base/src/main/res/drawable/ic_play.xml" value="0.1785" />
         <entry key="base/src/main/res/drawable/ic_play_white.xml" value="0.224" />
+        <entry key="base/src/main/res/drawable/ic_pull_down.xml" value="0.2505" />
+        <entry key="base/src/main/res/drawable/ic_share.xml" value="0.2505" />
         <entry key="base/src/main/res/drawable/ic_up_loader.xml" value="0.1785" />
         <entry key="base/src/main/res/drawable/shadow.xml" value="0.156" />
         <entry key="base/src/main/res/drawable/shape.xml" value="0.1785" />
+        <entry key="base/src/main/res/layout/item_card_recommend.xml" value="0.4888888888888889" />
         <entry key="base/src/main/res/layout/item_video_card.xml" value="0.11614583333333334" />
         <entry key="base/src/main/res/layout/item_video_card_popular.xml" value="0.335" />
         <entry key="base/src/main/res/layout/item_video_card_recommend.xml" value="0.31382978723404253" />
@@ -37,9 +45,15 @@
         <entry key="me/src/main/res/layout/fragment_me.xml" value="0.1171875" />
         <entry key="videoPlay/src/main/res/layout/activity_video_play.xml" value="0.1" />
         <entry key="videoPlay/src/main/res/layout/fragment_comment.xml" value="0.11303802758044296" />
-        <entry key="videoPlay/src/main/res/layout/fragment_introduction.xml" value="0.11303802758044296" />
-        <entry key="videoPlay/src/main/res/layout/uploader_info.xml" value="0.335" />
-        <entry key="videoPlay/src/main/res/layout/video_info.xml" value="0.10773834972210346" />
+        <entry key="videoPlay/src/main/res/layout/fragment_introduction.xml" value="0.5" />
+        <entry key="videoPlay/src/main/res/layout/introduction_desc.xml" value="0.46006389776357826" />
+        <entry key="videoPlay/src/main/res/layout/introduction_recommend_similar.xml" value="0.23129542539546816" />
+        <entry key="videoPlay/src/main/res/layout/introduction_uploader_info.xml" value="0.30910645575032064" />
+        <entry key="videoPlay/src/main/res/layout/introduction_video_info.xml" value="0.42043795620437957" />
+        <entry key="videoPlay/src/main/res/layout/item_recommend.xml" value="0.6076134699853587" />
+        <entry key="videoPlay/src/main/res/layout/operation.xml" value="0.67" />
+        <entry key="videoPlay/src/main/res/layout/uploader_info.xml" value="0.63154296875" />
+        <entry key="videoPlay/src/main/res/layout/video_info.xml" value="0.5" />
       </map>
     </option>
   </component>

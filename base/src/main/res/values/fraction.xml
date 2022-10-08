@@ -4,4 +4,5 @@
     <item name="recommend_video_aspectRatio" type="fraction">106%</item>
     <item name="ratio_4_3" type="fraction">133.3333%</item>
     <item name="ratio_5_8" type="fraction">62.5%</item>
+    <item name="introduction_recommend_aspectRatio" type="fraction">368.42%</item>
 </resources>

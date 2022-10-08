@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fengsheng.base.network.VideoNetWork
-import com.fengsheng.base.network.VideoPlayUrlDataBean
+import com.fengsheng.base.network.bean.VideoPlayUrlDataBean
 import kotlinx.coroutines.launch
 
 class VideoPlayViewModel : ViewModel() {

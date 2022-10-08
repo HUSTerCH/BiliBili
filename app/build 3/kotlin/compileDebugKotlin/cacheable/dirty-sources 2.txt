@@ -1,9 +1,0 @@
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/App.kt
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/main/MyFragmentVPAdapter.kt
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/SplashActivity.kt
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/BaseFragment.kt
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/main/MainFragment.kt
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/main/MainPageAdapter.kt
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/MeFragment.kt
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/main/FragmentAdapter.kt
-/Users/luochang/Documents/GitHub/BiliBili/app/src/main/java/com/fengsheng/bilibili/main/MainActivity.kt

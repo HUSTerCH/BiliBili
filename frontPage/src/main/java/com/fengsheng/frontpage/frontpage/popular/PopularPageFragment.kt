@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.fengsheng.base.network.PopularVideoDataBean
+import com.fengsheng.base.network.bean.PopularVideoDataBean
 import com.fengsheng.frontpage.R
 import kotlinx.android.synthetic.main.fragment_popular_page.*
 

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.percentlayout.widget.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_aspectRatio="@fraction/introduction_recommend_aspectRatio"
+        app:layout_widthPercent="100%">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:padding="3dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/introduction_recommend_video_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/fengsheng_video_test"
+                    app:riv_corner_radius="5dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/introduction_recommend_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+
+                    android:background="@drawable/shape"
+                    android:padding="2dp"
+                    android:text="25:15"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/introduction_recommend_video_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.5"
+                    android:maxLines="2"
+                    android:paddingTop="5dp"
+                    android:text="【sky 光遇】单人禁阁速通世界第三"
+                    android:textColor="@color/black"
+                    android:textSize="14.5dp"
+                    tools:ignore="NestedWeights" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_up_loader"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/introduction_recommend_uploader_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:text="风声_sky"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/ic_play"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/introduction_recommend_watch_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:text="88"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ic_barrage"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/introduction_recommend_barrage_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:text="-"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.percentlayout.widget.PercentFrameLayout>
