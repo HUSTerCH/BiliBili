@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.fragment_recommend_page.*
 
 class RecommendPageFragment : Fragment() {
 
-    private var videoList: ArrayList<RecommendItem>? = null
     private lateinit var viewModel: RecommendViewModel
     private var myAdapter: RecommendListAdapter? = null
     override fun onCreateView(
@@ -30,33 +29,13 @@ class RecommendPageFragment : Fragment() {
         viewModel = ViewModelProvider(this)[RecommendViewModel::class.java]
         viewModel.getRecommendVideosData()
         viewModel.videosData.observe(this) {
-            videoList = getVideos(it)
-            myAdapter = context?.let { it1 -> RecommendListAdapter(it1, videoList!!) }
+            myAdapter = context?.let { it1 -> RecommendListAdapter(it1, it) }
             recommend_video_list.adapter = myAdapter
             recommend_video_list.layoutManager =
                 GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
         }
     }
 
-    private fun getVideos(it: RecommendVideoDataBean): ArrayList<RecommendItem> {
-        val videos = ArrayList<RecommendItem>()
-        val videoList = it.data.archives
-        for (i in videoList.indices) {
-            val video = RecommendItem(
-                videoList[i].pic,
-                videoList[i].title,
-                videoList[i].owner.name,
-                videoList[i].duration,
-                videoList[i].stat.view,
-                videoList[i].pubdate,
-                videoList[i].aid,
-                videoList[i].cid,
-                videoList[i].bvid
-            )
-            videos.add(video)
-        }
-        return videos
-    }
 
     fun refresh():Boolean {
         viewModel.getRecommendVideosData()

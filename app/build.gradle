@@ -46,6 +46,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.fengsheng.bilibili'
 }
 
 dependencies {
@@ -70,6 +71,7 @@ dependencies {
     implementation 'com.airbnb.android:lottie:5.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'com.android.support:percent:26.+'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation'com.squareup.okhttp3:okhttp:4.10.0'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'

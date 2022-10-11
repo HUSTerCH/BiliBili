@@ -64,7 +64,7 @@ data class RecommendVideoDataBean(
             data class Stat(
                 val aid: Int,
                 val coin: Int,
-                val danmaku: Int,
+                val danmaku: Long,
                 val dislike: Int,
                 val favorite: Int,
                 val his_rank: Int,

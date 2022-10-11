@@ -13,7 +13,7 @@
         android:layout_marginRight="15dp">
 
         <TextView
-            android:id="@+id/video_desc"
+            android:id="@+id/introduction_video_info_video_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
@@ -26,7 +26,8 @@
             android:id="@+id/show_video_desc"
             android:layout_width="23dp"
             android:layout_height="match_parent"
-            android:gravity="bottom"
+            android:gravity="center"
+            android:layout_gravity="top"
             android:background="@color/white"
             android:src="@drawable/ic_pull_down" />
 
@@ -45,6 +46,7 @@
             android:src="@drawable/ic_play" />
 
         <TextView
+            android:id="@+id/introduction_video_info_watch_times"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -63,6 +65,7 @@
             android:src="@drawable/ic_barrage" />
 
         <TextView
+            android:id="@+id/introduction_video_info_barrage_num"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -75,6 +78,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/introduction_video_info_pub_date"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -91,6 +95,7 @@
             android:src="@drawable/ic_people" />
 
         <TextView
+            android:id="@+id/introduction_video_info_online_people_num"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="3dp"

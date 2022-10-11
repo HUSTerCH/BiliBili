@@ -1,6 +1,7 @@
 package com.fengsheng.videoplay.introduction.recommend
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +10,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fengsheng.base.R
+import com.fengsheng.base.network.bean.RelatedRecommendVideoDataBean
+import com.fengsheng.videoplay.VideoPlayActivity
 
 class RecommendListAdapter(
     private val context: Context,
-    private val videoList: List<RecommendItem>
+    private val videoData: RelatedRecommendVideoDataBean
 ) :
     RecyclerView.Adapter<RecommendListAdapter.RecommendListAdapterViewHolder>() {
     inner class RecommendListAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -29,22 +32,41 @@ class RecommendListAdapter(
     }
 
     override fun getItemCount(): Int {
-        return videoList.size
+        return videoData.data.size
     }
 
     override fun onBindViewHolder(holder: RecommendListAdapterViewHolder, position: Int) {
-        Glide.with(holder.itemView).load(Uri.parse(videoList[position].videoCoverUrl))
+        Glide.with(holder.itemView).load(Uri.parse(videoData.data[position].pic))
             .into(holder.itemView.findViewById(R.id.introduction_recommend_video_cover))
         holder.itemView.findViewById<TextView>(R.id.introduction_recommend_video_title).text =
-            videoList[position].videoName
+            videoData.data[position].title
         holder.itemView.findViewById<TextView>(R.id.introduction_recommend_watch_time).text =
-            setWatchTimeAndPubTime(videoList[position].watchTimes)
+            setWatchTimeAndPubTime(videoData.data[position].stat.view)
         holder.itemView.findViewById<TextView>(R.id.introduction_recommend_uploader_name).text =
-            videoList[position].uploaderName
+            videoData.data[position].owner.name
         holder.itemView.findViewById<TextView>(R.id.introduction_recommend_duration).text =
-            setDurationFormat(videoList[position].duration)
+            setDurationFormat(videoData.data[position].duration)
         holder.itemView.findViewById<TextView>(R.id.introduction_recommend_barrage_num).text =
-            videoList[position].barrageNum.toString()
+            videoData.data[position].stat.danmaku.toString()
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, VideoPlayActivity::class.java)
+            intent.putExtra("aid", videoData.data[position].aid)
+            intent.putExtra("cid", videoData.data[position].cid)
+            intent.putExtra("bvid", videoData.data[position].bvid)
+            intent.putExtra("watch_times",videoData.data[position].stat.view)
+            intent.putExtra("barrage_num",videoData.data[position].stat.danmaku)
+            intent.putExtra("video_name",videoData.data[position].title)
+            intent.putExtra("uploader_mid",videoData.data[position].owner.mid)
+            intent.putExtra("pub_time",videoData.data[position].pubdate)
+            intent.putExtra("uploader_mid",videoData.data[position].owner.mid)
+            intent.putExtra("like_num",videoData.data[position].stat.like)
+            intent.putExtra("coin_num",videoData.data[position].stat.coin)
+            intent.putExtra("starry_num",videoData.data[position].stat.favorite)
+            intent.putExtra("share_num",videoData.data[position].stat.share)
+            intent.putExtra("video_info_detail",videoData.data[position].desc)
+            context.startActivity(intent)
+        }
     }
 
     private fun setDurationFormat(duration: Int): String {
@@ -82,10 +104,10 @@ class RecommendListAdapter(
         val watchTimeAndPubTime: String
 
         val watchTime: String = if (watchTimesData > 100000000) {
-            String.format("%.1f亿观看", (watchTimesData / 100000000.0))
+            String.format("%.1f亿", (watchTimesData / 100000000.0))
         } else if (watchTimesData > 10000) {
-            String.format("%.1f万次播放", (watchTimesData / 10000.0))
-        } else String.format("%.1f次播放", watchTimesData.toDouble())
+            String.format("%.1f万", (watchTimesData / 10000.0))
+        } else String.format("%d", watchTimesData)
         watchTimeAndPubTime = watchTime
 
         return watchTimeAndPubTime

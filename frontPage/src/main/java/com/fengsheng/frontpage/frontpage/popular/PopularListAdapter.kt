@@ -1,6 +1,7 @@
 package com.fengsheng.frontpage.frontpage.popular
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,10 +11,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fengsheng.base.R
-import java.text.SimpleDateFormat
+import com.fengsheng.base.ToTime
+import com.fengsheng.base.network.bean.PopularVideoDataBean
+import com.fengsheng.videoplay.VideoPlayActivity
 import kotlin.math.floor
 
-class PopularListAdapter(private val context: Context, private val videoList: List<PopularItem>) :
+class PopularListAdapter(private val context: Context, private val videoData: PopularVideoDataBean) :
     RecyclerView.Adapter<PopularListAdapter.PopularListAdapterViewHolder>() {
     inner class PopularListAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
@@ -28,19 +31,40 @@ class PopularListAdapter(private val context: Context, private val videoList: Li
     }
 
     override fun getItemCount(): Int {
-        return videoList.size
+        return videoData.data.list.size
     }
 
     override fun onBindViewHolder(holder: PopularListAdapterViewHolder, position: Int) {
-        Glide.with(holder.itemView).load(Uri.parse(videoList[position].videoCoverUrl))
+        val videoList = videoData.data.list
+        Glide.with(holder.itemView).load(Uri.parse(videoList[position].pic))
             .into(holder.itemView.findViewById(R.id.popular_video_cover))
-        holder.itemView.findViewById<TextView>(R.id.popular_video_name).text = videoList[position].videoName
+        holder.itemView.findViewById<TextView>(R.id.popular_video_name).text = videoList[position].title
         holder.itemView.findViewById<TextView>(R.id.popular_video_uploader_name).text =
-            videoList[position].uploaderName
+            videoList[position].owner.name
         holder.itemView.findViewById<TextView>(R.id.popular_video_duration).text =
             setDurationFormat(videoList[position].duration)
         holder.itemView.findViewById<TextView>(R.id.popular_video_watch_times_pubTime).text =
-            setWatchTimeAndPubTime(videoList[position].watchTimes, videoList[position].backTime)
+            setWatchTimeAndPubTime(videoList[position].stat.view, videoList[position].pubdate)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, VideoPlayActivity::class.java)
+            intent.putExtra("aid",videoList[position].aid)
+            intent.putExtra("cid",videoList[position].cid)
+            intent.putExtra("bvid",videoList[position].bvid)
+            intent.putExtra("watch_times",videoList[position].stat.view)
+            intent.putExtra("barrage_num",videoList[position].stat.danmaku)
+            Log.e("PopularList", videoList[position].stat.danmaku.toString())
+            intent.putExtra("video_name",videoList[position].title)
+            intent.putExtra("uploader_mid",videoList[position].owner.mid)
+            intent.putExtra("pub_time",videoList[position].pubdate)
+            intent.putExtra("uploader_mid",videoList[position].owner.mid)
+            intent.putExtra("like_num",videoList[position].stat.like)
+            intent.putExtra("coin_num",videoList[position].stat.coin)
+            intent.putExtra("starry_num",videoList[position].stat.favorite)
+            intent.putExtra("share_num",videoList[position].stat.share)
+            intent.putExtra("video_info_detail",videoList[position].desc)
+            context.startActivity(intent)
+        }
     }
 
     private fun setDurationFormat(duration: Int): String {
@@ -94,7 +118,7 @@ class PopularListAdapter(private val context: Context, private val videoList: Li
             in 24..48 -> {
                 "昨天"
             }
-            else -> SimpleDateFormat("MM-dd").format(pubTimeData)
+            else -> ToTime.timeStampToStrMMdd(pubTimeData)
         }
 
 

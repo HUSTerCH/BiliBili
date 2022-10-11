@@ -1,9 +1,6 @@
 package com.fengsheng.base.network
 
-import com.fengsheng.base.network.bean.PopularVideoDataBean
-import com.fengsheng.base.network.bean.RecommendVideoDataBean
-import com.fengsheng.base.network.bean.RelatedRecommendVideoDataBean
-import com.fengsheng.base.network.bean.VideoPlayUrlDataBean
+import com.fengsheng.base.network.bean.*
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -22,4 +19,15 @@ interface GetVideo {
         @Query("avid") avid: Long,
         @Query("cid") cid: Long
     ): VideoPlayUrlDataBean
+
+    @GET("web-interface/card?")
+    suspend fun getUserCardInfo(
+        @Query("mid") mid: Long
+    ): UserCardInfoDataBean
+
+    @GET("player/online/total?")
+    suspend fun getOnlineNum(
+        @Query("bvid") bvid: String,
+        @Query("cid") cid: Long
+    ): OnlinePeopleDataBean
 }

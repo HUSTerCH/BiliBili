@@ -20,6 +20,5 @@ class VideoPlayViewModel : ViewModel() {
             val result = VideoNetWork.getVideoPlayUrlData(aid,cid)
             _videoData.value = result
         }
-        println("测试"+_videoData.value)
     }
 }

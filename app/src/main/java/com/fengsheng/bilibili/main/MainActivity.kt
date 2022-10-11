@@ -17,8 +17,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 @Route(path = "/main/activity")
 class MainActivity : AppCompatActivity() {
-    lateinit var mFragmentList: ArrayList<Fragment>
-    lateinit var mStateVPAdapter: FragmentStatePagerAdapter
+    private lateinit var mFragmentList: ArrayList<Fragment>
+    private lateinit var mStateVPAdapter: FragmentStatePagerAdapter
     lateinit var spannableString: SpannableString
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

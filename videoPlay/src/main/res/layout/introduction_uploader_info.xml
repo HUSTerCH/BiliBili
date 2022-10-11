@@ -7,7 +7,7 @@
     android:orientation="horizontal">
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/uploader_avatar"
+        android:id="@+id/introduction_uploader_avatar"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
@@ -26,7 +26,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/uploader_name"
+            android:id="@+id/introduction_uploader_name"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1.5"
@@ -38,18 +38,17 @@
             tools:ignore="NestedWeights" />
 
         <TextView
-            android:id="@+id/uploader_follow_vnum"
+            android:id="@+id/introduction_uploader_follow_vnum"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="2粉丝  2视频  IP属地：湖北"
+            android:text="2粉丝  2视频"
             android:textSize="10dp" />
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/follow_unfollow"
-
+        android:id="@+id/introduction_uploader_follow_unfollow"
         android:layout_width="0dp"
         android:layout_height="25dp"
         android:layout_gravity="center"

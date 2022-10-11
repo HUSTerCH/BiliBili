@@ -56,7 +56,7 @@ data class RelatedRecommendVideoDataBean(val code: Int, val data: List<Data>, va
         data class Stat(
             val aid: Int,
             val coin: Int,
-            val danmaku: Int,
+            val danmaku: Long,
             val dislike: Int,
             val favorite: Int,
             val his_rank: Int,

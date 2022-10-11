@@ -18,7 +18,7 @@
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/front_page_tabLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 app:tabBackground="@null"
                 app:tabGravity="fill"
                 app:tabIndicatorColor="@color/bilibili_pink"
