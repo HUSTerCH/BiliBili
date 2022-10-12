@@ -44,6 +44,8 @@
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
         </activity>
+        <activity android:name="com.fengsheng.search.suggest.SearchSuggestActivity"/>
+        <activity android:name="com.fengsheng.search.result.SearchResultActivity"/>
     </application>
 
 

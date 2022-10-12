@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fengsheng.base.view.RecycleScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/introduction_scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <com.fengsheng.videoplay.introduction.UploaderInfo
+            android:id="@+id/introduction_uploader_info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <com.fengsheng.videoplay.introduction.VideoInfo
+            android:id="@+id/introduction_video_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.fengsheng.videoplay.introduction.Desc
+            android:id="@+id/introduction_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.fengsheng.videoplay.introduction.Operation
+            android:id="@+id/introduction_operation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/introduction_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:nestedScrollingEnabled="false" />
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</com.fengsheng.base.view.RecycleScrollView>

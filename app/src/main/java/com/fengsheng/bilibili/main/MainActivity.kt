@@ -1,5 +1,6 @@
 package com.fengsheng.bilibili.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableString
@@ -11,6 +12,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.fengsheng.base.adapter.MyFragmentVPAdapter
 import com.fengsheng.bilibili.R
 import com.fengsheng.bilibili.databinding.ActivityMainBinding
+import com.fengsheng.search.suggest.SearchSuggestActivity
 import com.fengsheng.frontpage.FrontPageFragment
 import com.fengsheng.me.MeFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -51,9 +53,7 @@ class MainActivity : AppCompatActivity() {
                 onPagerSelected(position)
             }
 
-            override fun onPageScrollStateChanged(state: Int) {
-
-            }
+            override fun onPageScrollStateChanged(state: Int) {}
 
         })
 
@@ -108,7 +108,10 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
+        activity_main_search.setOnClickListener {
+            val intent = Intent(this, SearchSuggestActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initData() {

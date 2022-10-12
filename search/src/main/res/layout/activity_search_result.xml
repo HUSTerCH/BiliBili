@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_shape"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="7.5dp"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:id="@+id/search_result_input_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_shape"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:textSize="15dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="7.5dp"
+                android:src="@drawable/ic_cancel" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_vertical"
+            android:text="取消"
+            android:textSize="15.5dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/search_result_page_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:tabBackground="@null"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/bilibili_pink"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="auto"
+            app:tabSelectedTextColor="@color/bilibili_pink"
+            app:tabTextColor="@color/grey" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/search_result_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

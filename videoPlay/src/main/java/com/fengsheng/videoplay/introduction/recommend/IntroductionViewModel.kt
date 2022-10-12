@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.fengsheng.base.network.VideoNetWork
-import com.fengsheng.base.network.bean.OnlinePeopleDataBean
-import com.fengsheng.base.network.bean.RelatedRecommendVideoDataBean
-import com.fengsheng.base.network.bean.UserCardInfoDataBean
+import com.fengsheng.base.network.video.VideoNetWork
+import com.fengsheng.base.network.video.bean.OnlinePeopleDataBean
+import com.fengsheng.base.network.video.bean.RelatedRecommendVideoDataBean
+import com.fengsheng.base.network.video.bean.UserCardInfoDataBean
 import kotlinx.coroutines.launch
 
 class IntroductionViewModel : ViewModel() {

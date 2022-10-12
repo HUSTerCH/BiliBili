@@ -57,9 +57,11 @@ dependencies {
     implementation project(path:":me-export")
     implementation project(path:":base")
     implementation project(path:":videoPlay")
+    implementation project(path:":search")
 
-
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     kapt 'com.alibaba:arouter-compiler:1.5.2'
     implementation "androidx.core:core-splashscreen:1.0.0"
     implementation 'androidx.appcompat:appcompat:1.5.1'

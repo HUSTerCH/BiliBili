@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fengsheng.base.R
-import com.fengsheng.base.network.bean.RelatedRecommendVideoDataBean
+import com.fengsheng.base.network.video.bean.RelatedRecommendVideoDataBean
 import com.fengsheng.videoplay.VideoPlayActivity
 
 class RecommendListAdapter(

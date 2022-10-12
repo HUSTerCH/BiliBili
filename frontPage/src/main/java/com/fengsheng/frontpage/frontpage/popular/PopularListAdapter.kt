@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fengsheng.base.R
 import com.fengsheng.base.ToTime
-import com.fengsheng.base.network.bean.PopularVideoDataBean
+import com.fengsheng.base.network.video.bean.PopularVideoDataBean
 import com.fengsheng.videoplay.VideoPlayActivity
 import kotlin.math.floor
 

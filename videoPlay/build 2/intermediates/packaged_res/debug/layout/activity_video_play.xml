@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" android:tag="layout/activity_video_play_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_play_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.75"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/top_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@null"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/bilibili_pink"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="auto"
+                app:tabSelectedTextColor="@color/bilibili_pink"
+                app:tabTextColor="@color/grey" />
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/video_play_desc_com"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+         

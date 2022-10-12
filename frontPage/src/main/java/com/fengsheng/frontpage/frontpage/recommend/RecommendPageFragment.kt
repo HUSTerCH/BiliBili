@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.fengsheng.base.network.bean.RecommendVideoDataBean
+import com.fengsheng.base.network.video.bean.RecommendVideoDataBean
 import com.fengsheng.frontpage.R
 import kotlinx.android.synthetic.main.fragment_recommend_page.*
 
